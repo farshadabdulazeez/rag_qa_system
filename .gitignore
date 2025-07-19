@@ -7,3 +7,5 @@ __pycache__/
 *.log
 cache/
 data/
+.DS_Store
+temp.pdf
