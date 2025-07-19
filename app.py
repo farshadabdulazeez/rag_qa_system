@@ -19,10 +19,8 @@ if uploaded_file:
         with open("temp.pdf", "wb") as f:
             f.write(uploaded_file.read())
         chunks = load_and_chunk_pdf("temp.pdf")
-        st.success(f"✅ Loaded {len(chunks)} text chunks.")
 
         vectorstore = generate_embeddings(chunks)
-        st.success("✅ Embeddings ready.")
 
         query = st.text_input("🧠 Ask a question:")
         if query:
